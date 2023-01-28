@@ -1,0 +1,168 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+/*	font-family: aladin;
+	font-family: 'Uncial Antiqua';
+	font-family: 'sonsie one';*/
+	color: #fff;
+}
+:root{
+	--main-bg: rgba(2,2,2,0.6);
+}
+nav{
+	width: 100%;
+	padding: 20px;
+	/*background:var(--main-bg) ;*/
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: fixed;
+	z-index: 100;
+	font-family: 'uncial antiqua' !important;
+}
+nav .brand-logo a{
+	color: orange;
+	font-size: 1.5em;
+}
+nav .menu li{
+	display: inline-block;
+	margin-left: 10px;
+}
+
+
+#slideshow{
+	height: 100vh;
+	background: red;
+	position: relative;
+	overflow: hidden;
+}
+#slideshow .slide{
+	background: teal;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	opacity: 0;
+}
+#slideshow .slide.active{
+	opacity: 1;
+}
+#slideshow .slide img{
+	height: 150%;
+	width: 100%;
+	margin-top: -50px;
+}
+.control{
+	position: absolute;
+	top: 50%;
+	z-index: 1000;
+	display: none;
+	width: 100%;
+}
+.control i{
+	z-index: 100;
+	cursor: pointer;
+	font-size: 2em;
+	position: absolute;
+}
+.control i:first-child{
+	left: 50px;
+}
+.control i:last-child{
+	right: 50px;
+}
+#about{
+	/*opacity: 1;*/
+	height: 100%;
+	width: 100%;
+	background: var(--main-bg);
+	position: absolute;
+	top: 0;
+	color: #fff;
+	overflow: hidden;
+	display:block ;
+	/*padding: 50px 100px;*/
+}
+#about .intro{
+	width: 50%;
+	margin: 150px auto auto 150px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+#about .intro h1{
+	font-size: 1.5em;
+	line-height: 1.2em;
+	font-family: 'uncial antiqua';
+}
+#about .intro p{
+	line-height: 1.8em;
+	font-size: 1.3em;
+	margin: 20px 0;
+	font-family:'josefin sans';
+}
+#about .intro ul li{
+	display: inline-block;
+	border-bottom: 1px dashed orange;
+	margin-right: 10px;
+}
+#about  button{
+	border-radius: 20px;
+	border: 1px solid orange;
+	padding: 5px 15px;
+	color: #fff;
+	background: transparent;
+	font-size: 1em;
+	z-index: 9000;
+	cursor: pointer;
+	font-family: 'uncial antiqua';
+	position: absolute;
+	bottom: 50px;
+	left: 45%;
+}
+
+#portfolio{
+	background: #eee;
+	position: absolute;
+	height: 85vh;
+	overflow: scroll;
+	display: none;
+	padding: 40px;
+	width: 100%;
+	bottom: 0;
+	z-index: 10000;
+	border-top-left-radius:50px ;
+	border-top-right-radius:50px ;
+}
+#portfolio .category{
+	text-align: right;
+	padding: 10px;
+}
+#portfolio .category button{
+	padding: 10px;
+	color: #000;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+}
+#portfolio .category button.active{
+	background: orange;
+}
+#portfolio .gallery{
+	display: flex;
+	flex-wrap: wrap;
+}
+#portfolio .gallery div{
+	height: 400px;
+	width: 48%;
+	overflow: hidden;
+	margin: 10px ;
+}
+#portfolio .gallery img{
+	height: 100%;
+	width: 100%;
+	transition: .2s;
+}
+#portfolio .gallery img:hover{
+	transform: scale(1.2);	
+}
